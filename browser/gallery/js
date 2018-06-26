@@ -1,10 +1,10 @@
 `use strict`;
 let links = [
-  'i/breuer-building.jpg',
-  'i/guggenheim-museum.jpg',
-  'i/headquarters.jpg',
-  'i/IAC.jpg',
-  'i/new-museum.jpg'
+  'https://github.com/YurokBo/JS-in-browser/blob/master/browser/gallery/i/breuer-building.jpg?raw=true',
+  'https://github.com/YurokBo/JS-in-browser/blob/master/browser/gallery/i/guggenheim-museum.jpg?raw=true',
+  'https://github.com/YurokBo/JS-in-browser/blob/master/browser/gallery/i/headquarters.jpg?raw=true',
+  'https://github.com/YurokBo/JS-in-browser/blob/master/browser/gallery/i/new-museum.jpg?raw=true',
+  'https://github.com/YurokBo/JS-in-browser/blob/master/browser/gallery/i/IAC.jpg?raw=true'
 ];
 
 let img = document.getElementById('currentPhoto');
@@ -42,4 +42,4 @@ function nextImg() {
 changeImg(links); 
 
 document.getElementById('prevPhoto').onclick = prevImg;
-document.getElementById('nextPhoto').onclick = nextImg; 
+document.getElementById('nextPhoto').onclick = nextImg;
