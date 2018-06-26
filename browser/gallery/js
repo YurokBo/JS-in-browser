@@ -1,0 +1,45 @@
+`use strict`;
+let links = [
+  'i/breuer-building.jpg',
+  'i/guggenheim-museum.jpg',
+  'i/headquarters.jpg',
+  'i/IAC.jpg',
+  'i/new-museum.jpg'
+];
+
+let img = document.getElementById('currentPhoto');
+
+function changeImg(links) {
+  if (links.currId === undefined) {
+    links.currId = 0;
+  }
+  
+  if (links[links.currId] !== undefined) {
+    img.src = links[links.currId];
+  }
+}
+
+function prevImg() {
+  if (links.currId > 0) {
+    links.currId--;
+  } else {
+    links.currId = links.length - 1;
+  }
+  
+  changeImg(links);
+}
+
+function nextImg() {
+  if (links.currId < links.length - 1) {
+    links.currId++;
+  } else {
+    links.currId = 0;
+  }
+  
+  changeImg(links);
+}
+
+changeImg(links); 
+
+document.getElementById('prevPhoto').onclick = prevImg;
+document.getElementById('nextPhoto').onclick = nextImg; 
